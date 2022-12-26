@@ -1,0 +1,172 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+  --fs-heading: 1.8rem;
+  --fs-stat-heading: 1.5rem;
+  --fs-body: 0.9375rem;
+  --padding-medium: 2.5rem;
+}
+
+html {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  padding: 2em;
+  display: grid;
+  place-items: center;
+  padding: 1em;
+  font-size: var(--fs-body);
+  background-color: hsl(233deg, 47%, 7%);
+  color: hsla(0deg, 0%, 100%, 0.75);
+}
+
+img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: hsl(277deg, 70%, 36%);
+  overflow: hidden;
+}
+.intro__img {
+  opacity: 0.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.intro__img .image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.intro__content {
+  display: grid;
+  gap: 1.5em;
+  padding: var(--padding-medium);
+  text-align: center;
+  background-color: hsl(244deg, 38%, 16%);
+}
+.intro__content .heading {
+  font-family: "Inter", sans-serif;
+  font-size: var(--fs-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: hsl(0deg, 0%, 100%);
+}
+.intro__content .heading .heading__accent {
+  color: hsl(277deg, 64%, 61%);
+}
+.intro__content .stat_list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 1.5em;
+}
+.intro__content .stat_list .stat__heading {
+  font-family: "Inter", sans-serif;
+  font-size: var(--fs-stat-heading);
+  font-weight: 700;
+  color: hsl(0deg, 0%, 100%);
+}
+.intro__content .stat_list .stat__text {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --fs-heading: 2.3rem;
+    --fs-stat-heading: 1.2rem;
+    --fs-body: 0.9375rem;
+    --padding-medium: 3.5em;
+  }
+  .intro {
+    max-width: 1000px;
+    flex-direction: row-reverse;
+  }
+  .intro__img {
+    width: 100%;
+  }
+  .intro__content {
+    width: 100%;
+    text-align: start;
+  }
+  .intro__content .stat_list {
+    margin: 0;
+    flex-direction: row;
+    gap: 0;
+  }
+  .intro__content .stat_list .stat__text {
+    letter-spacing: 1px;
+    font-size: 0.875rem;
+  }
+}/*# sourceMappingURL=style.css.map */
